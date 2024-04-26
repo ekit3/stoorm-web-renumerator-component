@@ -8,15 +8,13 @@
   import Pay from '../components/Pay.svelte';
   export let company: string;
   let rateManager: IRateManager = RateManagerFactory.create(company as Company);
-  let selectedDevType: string;
-  let experience: number;
   let tjm: number;
   let amount: number;
-  $: amount = rateManager.getSalary(experience,selectedDevType,tjm) || 0;
+  $: amount = rateManager.getSalary(tjm) || 0;
 </script>
   <div class="component">
     <div class="block">
-      <Renumerator bind:selectedDevType bind:experience bind:tjm rateManager={rateManager} />
+      <Renumerator bind:tjm rateManager={rateManager} />
     </div>
     <div class="block">
       <Pay bind:amount rateManager={rateManager}/>

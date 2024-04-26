@@ -15,7 +15,7 @@
   .pay {
     height: 447px;
     width: 100%;
-    background: #9FF000;
+    background: #f42092;
     border-radius: 32px;
     font-size: 24px;
     display: flex;

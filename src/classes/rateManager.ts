@@ -24,29 +24,12 @@ export abstract class RateManager implements IRateManager {
     return this.config.tjm_base;
   }
 
-  getSalary(experience: number, jobName: string, selectedTjm: number): number {
-    const job = this.getRate(jobName);
-    if (job) {
-      const realXP = Math.min(job.tjmGrid.length, experience) - this.config.min_experience;
-      const jobXp = job.tjmGrid[realXP];
-      const tjm = selectedTjm || jobXp.tjm;
-      const salary = this.config.fixed_salary * 12 + (tjm - this.config.tjm_base) / 2 * (251 - 35 - this.config.group_days) * (1 + 0.1 / (52 * 5 / 12) * 25);
-      return Math.round(salary);
-    }
-    return this.config.min_salary;
-  }
-
-  updateTJM(experience: number, jobName: string): number {
-    const job = this.getRate(jobName);
-    if (job) {
-      const realXP = Math.min(job.tjmGrid.length, experience) - this.config.min_experience;
-      const jobXp = job.tjmGrid[realXP];
-      return jobXp.tjm;
-    }
-    return this.config.tjm_base;
+  getSalary(selectedTjm: number): number {
+    const salary = this.config.fixed_salary * 12 + (selectedTjm - this.config.tjm_base) / 2 * (251 - 35 - this.config.group_days) * (1 + 0.1 / (52 * 5 / 12) * 25);
+    return Math.round(salary);
   }
 
   public getJoinUsLink(): string {
-   return this.config.join_link;
+    return this.config.join_link;
   }
 }

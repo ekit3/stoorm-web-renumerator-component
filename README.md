@@ -2,7 +2,7 @@
 
 ## Developing
 
-First make a git clone : `git clone https://github.com/ekit3/web-renumerator-component.git` and `cd web-renumerator-component`
+First make a git clone : `git clone https://github.com/ekit3/stoorm-web-renumerator-component.git` and `cd stoorm-web-renumerator-component`
 
 after that, run `npm i` to install the npm dependencies.
 

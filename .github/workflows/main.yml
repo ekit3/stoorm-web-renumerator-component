@@ -2,24 +2,27 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
+    branches: 
       - main
+
 permissions:
   contents: write
 
 jobs:
-  build:
+  # Build job
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
+      - name: Checkout
+        uses: actions/checkout@v4
+          
       - name: Build and Prepare Files
         run: |
           npm ci
           npm run build-prod
-
+          
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
+          

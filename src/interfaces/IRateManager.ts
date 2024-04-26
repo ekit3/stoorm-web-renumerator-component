@@ -6,10 +6,10 @@ export interface IRateManager {
   getRateList(): Job[];
 
   getMinExperienceValue(): number;
-  getMinTJMValue(): number;
-  getSalary(experience: number,jobName: string, selectedTjm: number): number;
 
-  updateTJM(experience: number,jobName: string): number;
+  getMinTJMValue(): number;
+
+  getSalary(selectedTjm: number): number;
 
   getJoinUsLink(): string
 }

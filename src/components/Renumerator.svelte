@@ -1,50 +1,15 @@
 <script lang="ts">
-  import Select, {Option} from '@smui/select';
   import type {IRateManager} from '../interfaces/IRateManager';
   import minusSvg from '../images/minus-icon.svg?url';
   import plusSvg from '../images/plus-icon.svg?url';
 
   export let rateManager: IRateManager;
-  export let experience = 2;
-  export let tjm = rateManager.getMinTJMValue();
-  export let selectedDevType: string;
-  let minExperience = rateManager.getMinExperienceValue();
+  export let tjm = 600;
   let minTjm = rateManager.getMinTJMValue();
-  const devTypes = rateManager.getRateList();
 </script>
 <div class="renumerator">
-  <span class="title">Votre métier</span>
-
-  <Select
-      class="shaped-outlined"
-      variant="outlined"
-      bind:value={selectedDevType}
-      on:click={() => tjm = rateManager.updateTJM(experience, selectedDevType)}
-  >
-    {#if !selectedDevType}
-      <Option value="" disabled>Sélectionnez un poste</Option>
-    {/if}
-    {#each devTypes as devType}
-      <Option value={devType.name}>{devType.name}</Option>
-    {/each}
-  </Select>
-
   <div class="container">
-    <div class="half-block">
-      <span class="title">Années d'expérience</span>
-      <div class="flex">
-        <button on:click={() => experience = Math.max(minExperience, experience - 1)}
-                on:click={() => tjm = rateManager.updateTJM(experience, selectedDevType)}>
-          <img src={minusSvg} alt="Minus Svg icon" class="img-btn">
-        </button>
-        <span>{experience}</span>
-        <button on:click={() => experience += 1}
-                on:click={() => tjm = rateManager.updateTJM(experience, selectedDevType)}>
-          <img src={plusSvg} alt="Plus Svg icon" class="img-btn">
-        </button>
-      </div>
-    </div>
-    <div class="half-block">
+    <div class="block">
       <span class="title">TJM</span>
       <div class="flex">
         <button on:click={() => tjm = Math.max(minTjm, tjm - 10)}>
@@ -61,7 +26,7 @@
 
 <style>
 
-  @import "https://ekit3.github.io/web-renumerator-component/dist/smui.css";
+  @import "https://ekit3.github.io/stoorm-web-renumerator-component/dist/smui.css";
 
   .renumerator {
     display: flex;
@@ -69,24 +34,24 @@
     width: calc(100% - 80px);
     flex-shrink: 0;
     border-radius: 32px;
-    background: linear-gradient(180deg, #1D211A 0%, #1D2E0E 100%);
+    background: linear-gradient(180deg, #201a21 0%, #250e2e 100%);
     box-shadow: 0 24px 44px 0 rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(22px);
     flex-direction: column;
   }
 
-  .renumerator .half-block {
+  .renumerator .block {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
   }
 
-  .renumerator .half-block span.title {
+  .renumerator .block span.title {
     margin-bottom: 40px;
     text-align: center;
     display: block;
-    flex:1;
+    flex: 1;
   }
 
   .renumerator .flex {
@@ -119,7 +84,7 @@
     display: flex;
     align-self: center;
     width: 100%;
-    margin-top:40px;
+    margin-top: 40px;
   }
 
   /* overide selectBox */
@@ -144,7 +109,7 @@
   }
 
   :global(.mdc-select__menu) {
-    background: #404639;
+    background: #413946;
     color: white;
   }
 
@@ -214,15 +179,16 @@
     .img-btn {
       width: 1.5em;
     }
+
     .renumerator .flex span {
       font-size: 1.5em;
     }
 
-    .renumerator .container{
+    .renumerator .container {
       flex-direction: column;
     }
 
-    .renumerator .half-block{
+    .renumerator .block {
       width: 100%;
     }
 

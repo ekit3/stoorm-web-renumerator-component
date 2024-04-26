@@ -1,0 +1,21 @@
+:root {
+  --logo-gradient: linear-gradient(180deg, rgba(196, 0, 240, 0) 50%, #e800f0 80%);
+  --primary-110: #f000ec;
+  --primary-100: rgb(196, 46, 193);
+  --primary-80: rgb(131, 37, 157);
+  --primary-60: rgb(93, 28, 118);
+  --primary-40: rgb(70, 18, 78);
+  --primary-20: rgb(35, 9, 39);
+  --primary-10: rgba(14, 19, 11, 1);
+  --shadeslight-1: rgba(255, 255, 255, 1);
+  --shadeslight-2: rgba(207, 207, 207, 1);
+  --shadeslight-3: rgb(172, 170, 172);
+  --shadeslight-4: rgba(135, 136, 134, 1);
+  --shadesdark-4: rgb(112, 110, 112);
+  --shadesdark-3: rgb(88, 86, 88);
+  --shadesdark-2: rgb(64, 61, 65);
+  --shadesdark-1: rgb(40, 37, 41);
+  --errorprimary: rgba(196, 66, 46, 1);
+  --errordark: rgba(108, 40, 30, 1);
+  --errorlight: rgba(235, 177, 168, 1);
+}
