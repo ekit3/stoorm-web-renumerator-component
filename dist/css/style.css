@@ -87,3 +87,10 @@ body {
   }
 
 }
+
+
+/** WORDPRESS OVERRIDE */
+#main-content {
+  margin: 0 120px 0;
+  background-color: #fff;
+}

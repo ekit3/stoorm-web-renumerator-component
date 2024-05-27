@@ -62,7 +62,7 @@
     color: white;
     font-weight: 900;
     font-size: 60px;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
   }
 
   .pay a {
@@ -96,6 +96,7 @@
     justify-content: center;
     display: flex;
     flex: 1;
+    margin: 20px 0 20px 0;
   }
 
   .pay .flex button {

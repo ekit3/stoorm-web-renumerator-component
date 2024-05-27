@@ -39,7 +39,7 @@
   }
 
   .renumerator .block span.title {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 900;
     margin-bottom: 40px;
     text-align: center;
