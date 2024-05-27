@@ -1,24 +1,12 @@
 <script lang="ts">
-  import type {IRateManager} from '../interfaces/IRateManager';
-  import minusSvg from '../images/minus-icon.svg?url';
-  import plusSvg from '../images/plus-icon.svg?url';
-
-  export let rateManager: IRateManager;
-  export let tjm = 600;
-  let minTjm = rateManager.getMinTJMValue();
 </script>
 <div class="renumerator">
   <div class="container">
     <div class="block">
-      <span class="title">TJM</span>
+      <span class="title">Découvrez votre futur salaire ! </span>
       <div class="flex">
-        <button on:click={() => tjm = Math.max(minTjm, tjm - 10)}>
-          <img src={minusSvg} alt="Minus Svg icon" class="img-btn">
-        </button>
-        <span>{tjm}</span>
-        <button on:click={() => tjm += 10}>
-          <img src={plusSvg} alt="Plus Svg icon" class="img-btn">
-        </button>
+        <p>Parce que le respect entre collaborateurs passe avant tout par une rémunération équitable et juste, nous avons mis en place un système qui permet à nos employés de s’épanouir dans et en dehors de leur vie professionnelle.</p>
+        <p>Pour vous donner un aperçu de ce à quoi pourrait ressembler votre futur salaire, nous vous laissons vous amuser avec notre simulateur.</p>
       </div>
     </div>
   </div>
@@ -30,11 +18,12 @@
 
   .renumerator {
     display: flex;
+    height: 447px;
     padding: 77px 40px;
     width: calc(100% - 80px);
     flex-shrink: 0;
     border-radius: 32px;
-    background: linear-gradient(180deg, #201a21 0%, #250e2e 100%);
+    background: linear-gradient(0deg, #241B30, #241B30), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 24px 44px 0 rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(22px);
     flex-direction: column;
@@ -44,35 +33,27 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
+    justify-content: center;
   }
 
   .renumerator .block span.title {
+    font-size: 3em;
+    font-weight: 900;
     margin-bottom: 40px;
     text-align: center;
     display: block;
     flex: 1;
   }
-
-  .renumerator .flex {
-    justify-content: space-around;
-    display: flex;
-    flex: 1;
+  .renumerator .flex{
+    text-align: justify;
+    margin: 5px 50px 0;
+    font-size: 1.25em;
   }
 
-  .renumerator .flex button {
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .renumerator .flex span {
-    font-size: 2em;
-    font-weight: 900;
-    margin: 5px 2px;
+  .renumerator .flex p {
+    margin: 0 0 30px;
   }
 
   .renumerator .title {
@@ -84,115 +65,49 @@
     display: flex;
     align-self: center;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 120px;
   }
 
-  /* overide selectBox */
-
-  * :global(.mdc-select__dropdown-icon-graphic) {
-    fill: white !important;
-  }
-
-  * :global(.mdc-select__selected-text) {
-    color: white !important;
-  }
-
-  * :global(.mdc-select__selected-text) {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: Montserrat, serif;
-  }
-
-  * :global(.mdc-deprecated-list-item--selected) {
-    background-color: #0E130B;
-    color: white !important;
-  }
-
-  :global(.mdc-select__menu) {
-    background: #413946;
-    color: white;
-  }
-
-  :global(.mdc-select__menu li) {
-    color: white;
-  }
-
-  :root {
-    --mdc-theme-primary: rgba(255, 255, 255, 0.6);
-  }
-
-  :global(.smui-select__line-ripple) {
-    border-color: yellow;
-  }
-
-  :global(.smui-select__dropdown-icon) {
-    color: grey;
-  }
-
-
-  :global(.smui-select--focused .smui-select__line-ripple) {
-    border-color: blue;
-  }
-
-  * :global(.mdc-select) {
-    background: rgba(255, 255, 255, 0.10);
-  }
-
-  * :global(.mdc-select__anchor) {
-    height: 100px;
-  }
-
-  * :global(.shaped-outlined),
-  * :global(.shaped-outlined .mdc-select__anchor) {
-    border-radius: 24px;
-  }
-
-  * :global(.shaped-outlined .mdc-text-field__input) {
-    padding-left: 32px;
-    padding-right: 0;
-  }
-
-  * :global(.shaped-outlined
-    .mdc-notched-outline
-    .mdc-notched-outline__leading) {
-    border-radius: 24px 0 0 24px;
-    border-color: rgba(255, 255, 255, 0.6);
-    width: 28px;
-  }
-
-  * :global(.shaped-outlined
-    .mdc-notched-outline
-    .mdc-notched-outline__trailing) {
-    border-color: rgba(255, 255, 255, 0.6);
-    border-radius: 0 24px 24px 0;
-  }
-
-  * :global(.shaped-outlined .mdc-notched-outline .mdc-notched-outline__notch) {
-    border-color: rgba(255, 255, 255, 0.6);
-  }
-
-  .img-btn {
-    width: 3em;
+  @media screen and (max-width: 380px) {
+    .renumerator .block span.title {
+      font-size: 0.75em;
+    }
   }
 
   @media screen and (max-width: 500px) {
-    .img-btn {
-      width: 1.5em;
-    }
 
-    .renumerator .flex span {
-      font-size: 1.5em;
+    .renumerator .block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: center;
     }
 
     .renumerator .container {
-      flex-direction: column;
+      display: flex;
+      align-self: center;
+      width: 100%;
+      margin-top: 70px;
     }
 
-    .renumerator .block {
-      width: 100%;
+    .renumerator .flex{
+      text-align: justify;
+      margin: 5px 20px 0;
+      font-size: 1em;
+    }
+
+    .renumerator .flex p {
+      margin: 0 0 20px;
+    }
+
+    .renumerator .block span.title {
+      font-size: 1.25em;
     }
 
   }
+
+
 
 
 </style>

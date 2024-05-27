@@ -14,10 +14,10 @@
 </script>
   <div class="component">
     <div class="block">
-      <Renumerator bind:tjm rateManager={rateManager} />
+      <Renumerator />
     </div>
     <div class="block">
-      <Pay bind:amount rateManager={rateManager}/>
+      <Pay bind:tjm bind:amount rateManager={rateManager}/>
     </div>
   </div>
 

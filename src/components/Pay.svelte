@@ -1,23 +1,43 @@
 <script lang="ts">
   import type {IRateManager} from "../interfaces/IRateManager";
+  import minusSvg from '../images/minus-icon.svg?url';
+  import plusSvg from '../images/plus-icon.svg?url';
+  import stoorm_logo from '../images/remunerator_background.svg'
 
-  export let amount = 450;
   export let rateManager: IRateManager;
+  export let tjm = 600;
+  let minTjm = rateManager.getMinTJMValue();
+  export let amount = 450;
 </script>
-  
-<div class="pay">
+
+<div class="pay" style="background: url({stoorm_logo}) no-repeat bottom, linear-gradient(180deg, rgb(241, 186, 216) 0%, #F42092 31%)">
+  <div class="block">
+    <span class="title">Votre TJM</span>
+    <div class="flex">
+      <button on:click={() => tjm = Math.max(minTjm, tjm - 10)}>
+        <img src={minusSvg} alt="Minus Svg icon" class="img-btn">
+      </button>
+      <span>{tjm}</span>
+      <button on:click={() => tjm += 10}>
+        <img src={plusSvg} alt="Plus Svg icon" class="img-btn">
+      </button>
+    </div>
+  </div>
+  <span class="line"></span>
   <span class="title">Votre salaire annuel brut</span>
   <span class="amount">{amount} €</span>
   <a href="{rateManager.getJoinUsLink()}">Envie de nous rejoindre ?</a>
 </div>
 
 <style>
+
   .pay {
-    height: 447px;
+    font-weight: 900;
+    height: 100%;
     width: 100%;
-    background: #f42092;
+    background-size: contain !important;
     border-radius: 32px;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,16 +45,24 @@
   }
 
   .pay span.title {
-    margin-top: 60px;
-    color: #0E130B;
+    margin-top: 50px;
+    color: white;
     margin-bottom: 20px;
   }
 
+  .pay span.line {
+    margin-top: 20px;
+    color: white;
+    border: 2px white solid;
+    width: 90%;
+    border-radius: 32px;
+  }
+
   .pay span.amount {
-    color: #0E130B;
+    color: white;
     font-weight: 900;
     font-size: 60px;
-    margin-bottom: 54px;
+    margin-bottom: 5px;
   }
 
   .pay a {
@@ -47,12 +75,72 @@
     font-family: Montserrat,serif;
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .pay .block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pay .block span.title {
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+    flex: 1;
+  }
+
+  .pay .flex {
+    justify-content: center;
+    display: flex;
+    flex: 1;
+  }
+
+  .pay .flex button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pay .flex span {
+    font-size: 2em;
+    font-weight: 900;
+    margin: 2px 2px;
+  }
+
+  .pay .title {
+    margin-bottom: 5px;
+    text-align: left;
   }
 
   @media screen and (max-width: 380px) {
     .pay span.title{
       font-size: 0.75em;
     }
+  }
+
+  .img-btn {
+    width: 3em;
+  }
+
+  @media screen and (max-width: 500px) {
+    .img-btn {
+      width: 1.5em;
+    }
+
+    .pay .flex span {
+      font-size: 1.5em;
+    }
+
+    .pay .block {
+      width: 100%;
+    }
+
   }
 </style>
   
