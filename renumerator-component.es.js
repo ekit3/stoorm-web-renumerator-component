@@ -60,7 +60,7 @@ function g(e) {
 function k(e) {
   return document.createTextNode(e);
 }
-function M() {
+function w() {
   return k(" ");
 }
 function F(e, t, n, s) {
@@ -90,14 +90,14 @@ function q(e) {
   U = e;
 }
 const I = [], E = [];
-let w = [];
+let M = [];
 const P = [], gt = /* @__PURE__ */ Promise.resolve();
 let z = !1;
 function pt() {
   z || (z = !0, gt.then(y));
 }
 function B(e) {
-  w.push(e);
+  M.push(e);
 }
 function X(e) {
   P.push(e);
@@ -119,11 +119,11 @@ function y() {
     }
     for (q(null), I.length = 0, j = 0; E.length; )
       E.pop()();
-    for (let t = 0; t < w.length; t += 1) {
-      const n = w[t];
+    for (let t = 0; t < M.length; t += 1) {
+      const n = M[t];
       D.has(n) || (D.add(n), n());
     }
-    w.length = 0;
+    M.length = 0;
   } while (I.length);
   for (; P.length; )
     P.pop()();
@@ -138,7 +138,7 @@ function $t(e) {
 }
 function _t(e) {
   const t = [], n = [];
-  w.forEach((s) => e.indexOf(s) === -1 ? t.push(s) : n.push(s)), n.forEach((s) => s()), w = t;
+  M.forEach((s) => e.indexOf(s) === -1 ? t.push(s) : n.push(s)), n.forEach((s) => s()), M = t;
 }
 const A = /* @__PURE__ */ new Set();
 let bt;
@@ -468,11 +468,11 @@ class vt {
     return this.config.join_link;
   }
 }
-const jt = 3400, It = 0, Mt = 15, wt = 450, kt = "https://stoorm.fr/#contact", qt = {
+const jt = 3400, It = 0, wt = 15, Mt = 450, kt = "https://stoorm.fr/#contact", qt = {
   fixed_salary: jt,
   min_salary: It,
-  group_days: Mt,
-  tjm_base: wt,
+  group_days: wt,
+  tjm_base: Mt,
   join_link: kt
 };
 class St extends vt {
@@ -497,10 +497,10 @@ function Lt(e) {
   let t, n, s, i, l, r, o, c, a, h, u, p, b, f;
   return {
     c() {
-      t = g("div"), n = g("div"), s = g("div"), i = g("span"), i.textContent = "TJM", l = M(), r = g("div"), o = g("button"), o.innerHTML = `<img src="${At}" alt="Minus Svg icon" class="img-btn svelte-1naq16l"/>`, c = M(), a = g("span"), h = k(
+      t = g("div"), n = g("div"), s = g("div"), i = g("span"), i.textContent = "TJM", l = w(), r = g("div"), o = g("button"), o.innerHTML = `<img src="${At}" alt="Minus Svg icon" class="img-btn svelte-1naq16l"/>`, c = w(), a = g("span"), h = k(
         /*tjm*/
         e[0]
-      ), u = M(), p = g("button"), p.innerHTML = `<img src="${Ct}" alt="Plus Svg icon" class="img-btn svelte-1naq16l"/>`, m(i, "class", "title svelte-1naq16l"), m(o, "class", "svelte-1naq16l"), m(a, "class", "svelte-1naq16l"), m(p, "class", "svelte-1naq16l"), m(r, "class", "flex svelte-1naq16l"), m(s, "class", "block svelte-1naq16l"), m(n, "class", "container svelte-1naq16l"), m(t, "class", "renumerator svelte-1naq16l");
+      ), u = w(), p = g("button"), p.innerHTML = `<img src="${Ct}" alt="Plus Svg icon" class="img-btn svelte-1naq16l"/>`, m(i, "class", "title svelte-1naq16l"), m(o, "class", "svelte-1naq16l"), m(a, "class", "svelte-1naq16l"), m(p, "class", "svelte-1naq16l"), m(r, "class", "flex svelte-1naq16l"), m(s, "class", "block svelte-1naq16l"), m(n, "class", "container svelte-1naq16l"), m(t, "class", "renumerator svelte-1naq16l");
     },
     m(_, v) {
       L(_, t, v), d(t, n), d(n, s), d(s, i), d(s, l), d(s, r), d(r, o), d(r, c), d(r, a), d(a, h), d(r, u), d(r, p), b || (f = [
@@ -534,7 +534,7 @@ function Lt(e) {
   };
 }
 function Dt(e, t, n) {
-  let { rateManager: s } = t, { tjm: i = s.getMinTJMValue() } = t, l = s.getMinTJMValue();
+  let { rateManager: s } = t, { tjm: i = 600 } = t, l = s.getMinTJMValue();
   const r = () => n(0, i = Math.max(l, i - 10)), o = () => n(0, i += 10);
   return e.$$set = (c) => {
     "rateManager" in c && n(2, s = c.rateManager), "tjm" in c && n(0, i = c.tjm);
@@ -565,10 +565,10 @@ function zt(e) {
   let t, n, s, i, l, r, o, c, a, h;
   return {
     c() {
-      t = g("div"), n = g("span"), n.textContent = "Votre salaire annuel brut", s = M(), i = g("span"), l = k(
+      t = g("div"), n = g("span"), n.textContent = "Votre salaire annuel brut", s = w(), i = g("span"), l = k(
         /*amount*/
         e[0]
-      ), r = k(" €"), o = M(), c = g("a"), a = k("Envie de nous rejoindre ?"), m(n, "class", "title svelte-bfrk9h"), m(i, "class", "amount svelte-bfrk9h"), m(c, "href", h = /*rateManager*/
+      ), r = k(" €"), o = w(), c = g("a"), a = k("Envie de nous rejoindre ?"), m(n, "class", "title svelte-bfrk9h"), m(i, "class", "amount svelte-bfrk9h"), m(c, "href", h = /*rateManager*/
       e[1].getJoinUsLink()), m(c, "class", "svelte-bfrk9h"), m(t, "class", "pay svelte-bfrk9h");
     },
     m(u, p) {
@@ -643,7 +643,7 @@ function Gt(e) {
     e[1] !== void 0 && (b.amount = /*amount*/
     e[1]), o = new ot({ props: b }), E.push(() => Q(o, "amount", p)), {
       c() {
-        t = g("div"), n = g("div"), tt(s.$$.fragment), l = M(), r = g("div"), tt(o.$$.fragment), m(n, "class", "block svelte-1sqfk6p"), m(r, "class", "block svelte-1sqfk6p"), m(t, "class", "component svelte-1sqfk6p");
+        t = g("div"), n = g("div"), tt(s.$$.fragment), l = w(), r = g("div"), tt(o.$$.fragment), m(n, "class", "block svelte-1sqfk6p"), m(r, "class", "block svelte-1sqfk6p"), m(t, "class", "component svelte-1sqfk6p");
       },
       m(f, _) {
         L(f, t, _), d(t, n), G(s, n, null), d(t, l), d(t, r), G(o, r, null), a = !0;
