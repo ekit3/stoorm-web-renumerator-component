@@ -15,7 +15,7 @@ body {
   box-shadow: 0 24px 44px #00000040;
   backdrop-filter: blur(44px) brightness(100%);
   -webkit-backdrop-filter: blur(44px) brightness(100%);
-  background: radial-gradient(50% 50% at 50% 50%, rgb(30.35, 51.66, 12.09) 0%, rgb(22, 27, 19) 50%, rgb(28, 32, 25) 100%);
+  background: #FFFFFF;
 }
 
 .advantages-title {
@@ -39,7 +39,7 @@ body {
   font-size: 1rem;
   border-radius: 24px;
   padding: 5px 20px;
-  color: #F5F2F8;
+  color: #000000;
   font-weight: 400;
   margin-bottom: 1rem;
 }
