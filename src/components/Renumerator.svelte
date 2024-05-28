@@ -18,7 +18,6 @@
 
   .renumerator {
     display: flex;
-    height: 447px;
     padding: 77px 40px;
     width: calc(100% - 80px);
     flex-shrink: 0;
