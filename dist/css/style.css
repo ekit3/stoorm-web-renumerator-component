@@ -71,15 +71,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-  /** WORDPRESS OVERRIDE */
-  #main-content {
-    margin: 0 10px 0 !important;
-  }
-}
-
-
-@media screen and (max-width: 380px), screen and (max-height: 700px) {
+@media screen and (max-width: 1023px), screen and (max-height: 700px) {
 
   .rounded-pill {
     font-size: 10px;
@@ -87,7 +79,7 @@ body {
 
   /** WORDPRESS OVERRIDE */
   #main-content {
-    margin: 0 50px 0 5px !important;;
+    margin: 0 50px 0 5px !important;
   }
 }
 
