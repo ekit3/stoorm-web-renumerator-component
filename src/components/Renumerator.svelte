@@ -74,7 +74,7 @@
     }
 
     .renumerator .block span.title {
-      font-size: 0.75em;
+      font-size: 2em;
     }
   }
 
