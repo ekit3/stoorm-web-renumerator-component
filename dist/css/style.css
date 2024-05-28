@@ -3,7 +3,7 @@
 body {
   background: #F5F2F8;
   overflow-x: hidden;
-  line-height: 1em !important; /* override wordpress */
+  line-height: 1 !important; /* override wordpress */
 }
 
 .content-advantages {
