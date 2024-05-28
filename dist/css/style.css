@@ -81,6 +81,10 @@ body {
   #main-content {
     margin: 0 50px 0 5px !important;
   }
+
+  .content-advantages{
+    margin-left: 22px;
+  }
 }
 
 
