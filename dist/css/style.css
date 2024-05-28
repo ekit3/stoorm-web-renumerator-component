@@ -84,6 +84,16 @@ body {
     margin-left: 22px;
     width: 100%;
   }
+
+  .rounded-pill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rounded-pill .img-4 {
+    margin-bottom: 4px;
+  }
 }
 
 
