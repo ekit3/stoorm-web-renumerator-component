@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 
 body {
-  background: white;
+  background: #F5F2F8;
   overflow-x: hidden;
 }
 
@@ -12,9 +12,6 @@ body {
   margin-top: 1.5em;
   height: fit-content;
   border-radius: 32px;
-  box-shadow: 0 24px 44px #00000040;
-  backdrop-filter: blur(44px) brightness(100%);
-  -webkit-backdrop-filter: blur(44px) brightness(100%);
   background: #FFFFFF;
 }
 
@@ -51,10 +48,8 @@ body {
 }
 
 .footer {
-  /*position: absolute;*/
   width: 100%;
   text-align: center;
-  /*top: 170%;*/
   font-family: Montserrat, Helvetica, serif;
 }
 
@@ -92,5 +87,6 @@ body {
 /** WORDPRESS OVERRIDE */
 #main-content {
   margin: 0 120px 0;
-  background-color: #fff;
+  background: #F5F2F8;
 }
+
