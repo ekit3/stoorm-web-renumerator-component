@@ -68,7 +68,11 @@
     margin-top: 120px;
   }
 
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 1023px) {
+    .renumerator .container{
+      margin-top: 5px;
+    }
+
     .renumerator .block span.title {
       font-size: 0.75em;
     }
@@ -88,7 +92,7 @@
       display: flex;
       align-self: center;
       width: 100%;
-      margin-top: 70px;
+      margin-top: 0;
     }
 
     .renumerator .flex{
