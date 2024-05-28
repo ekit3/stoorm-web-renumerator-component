@@ -7,6 +7,7 @@
   export let rateManager: IRateManager;
   export let tjm = 600;
   let minTjm = rateManager.getMinTJMValue();
+  let maxTjm = 2000
   export let amount = 450;
 </script>
 
@@ -18,7 +19,7 @@
         <img src={minusSvg} alt="Minus Svg icon" class="img-btn">
       </button>
       <span>{tjm}</span>
-      <button on:click={() => tjm += 10}>
+      <button on:click={() =>  tjm = Math.min(maxTjm, tjm + 10)}>
         <img src={plusSvg} alt="Plus Svg icon" class="img-btn">
       </button>
     </div>
