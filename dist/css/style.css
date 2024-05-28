@@ -75,10 +75,6 @@ body {
 
 @media screen and (max-width: 1023px), screen and (max-height: 700px) {
 
-  .rounded-pill {
-    font-size: 10px;
-  }
-
   /** WORDPRESS OVERRIDE */
   #main-content {
     margin: 0 50px 0 5px !important;
