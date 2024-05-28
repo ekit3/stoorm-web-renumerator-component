@@ -20,12 +20,9 @@
     display: flex;
     padding: 77px 40px;
     width: calc(100% - 80px);
-    flex-shrink: 0;
     border-radius: 32px;
     background: linear-gradient(0deg, #241B30, #241B30), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0 24px 44px 0 rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(22px);
-    flex-direction: column;
+    flex: 1;
   }
 
   .renumerator .block {
@@ -34,7 +31,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    justify-content: center;
+    flex: 1;
   }
 
   .renumerator .block span.title {
@@ -43,10 +40,8 @@
     margin-bottom: 40px;
     text-align: center;
     display: block;
-    flex: 1;
   }
   .renumerator .flex{
-    text-align: justify;
     margin: 5px 50px 0;
     font-size: 1.25em;
   }
@@ -64,7 +59,6 @@
     display: flex;
     align-self: center;
     width: 100%;
-    margin-top: 120px;
   }
 
   @media screen and (max-width: 1023px) {

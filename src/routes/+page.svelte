@@ -31,6 +31,7 @@
     font-family: Montserrat,serif;
     font-size: 16px;
     font-weight: 500;
+    align-items: stretch;
   }
 
   .block {
@@ -39,6 +40,10 @@
     position: relative;
     z-index: 1;
     margin: 0 22px 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Make blocks flexible to grow within the parent container */
+    justify-content: stretch; /* Ensure inner content stretches */
   }
 
   .block:nth-child(1){

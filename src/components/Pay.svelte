@@ -43,6 +43,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 1;
   }
 
   .pay span.title {
@@ -84,6 +85,7 @@
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
+    flex: 1;
   }
 
   .pay .block span.title {
