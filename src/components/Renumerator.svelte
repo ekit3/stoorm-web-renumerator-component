@@ -89,7 +89,6 @@
     }
 
     .renumerator .flex{
-      text-align: justify;
       margin: 5px 20px 0;
       font-size: 1em;
     }
