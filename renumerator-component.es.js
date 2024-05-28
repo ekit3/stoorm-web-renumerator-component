@@ -1,7 +1,7 @@
 var pt = Object.defineProperty;
 var Dt = (e, t, n) => t in e ? pt(e, t, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[t] = n;
 var f = (e, t, n) => (Dt(e, typeof t != "symbol" ? t + "" : t, n), n);
-function m() {
+function y() {
 }
 function gt(e) {
   return e();
@@ -18,20 +18,20 @@ function dt(e) {
 function V(e, t) {
   return e != e ? t == t : e !== t || e && typeof e == "object" || typeof e == "function";
 }
-function yt(e) {
+function mt(e) {
   return Object.keys(e).length === 0;
 }
 function l(e, t) {
   e.appendChild(t);
 }
 function W(e, t, n) {
-  const s = mt(e);
+  const s = yt(e);
   if (!s.getElementById(t)) {
     const o = N("style");
     o.id = t, o.textContent = n, zt(s, o);
   }
 }
-function mt(e) {
+function yt(e) {
   if (!e)
     return document;
   const t = e.getRootNode ? e.getRootNode() : e.ownerDocument;
@@ -60,7 +60,7 @@ function N(e) {
 function b(e) {
   return document.createTextNode(e);
 }
-function y() {
+function m() {
   return b(" ");
 }
 function ot(e, t, n, s) {
@@ -187,7 +187,7 @@ function X(e, t, n, s, o, a, i = null, u = [-1]) {
     ctx: [],
     // state
     props: a,
-    update: m,
+    update: y,
     not_equal: o,
     bound: rt(),
     // lifecycle
@@ -419,7 +419,7 @@ class q {
   }
   /** @returns {void} */
   $destroy() {
-    H(this, 1), this.$destroy = m;
+    H(this, 1), this.$destroy = y;
   }
   /**
    * @template {Extract<keyof Events, string>} K
@@ -429,7 +429,7 @@ class q {
    */
   $on(t, n) {
     if (!dt(n))
-      return m;
+      return y;
     const s = this.$$.callbacks[t] || (this.$$.callbacks[t] = []);
     return s.push(n), () => {
       const o = s.indexOf(n);
@@ -441,7 +441,7 @@ class q {
    * @returns {void}
    */
   $set(t) {
-    this.$$set && !yt(t) && (this.$$.skip_bound = !0, this.$$set(t), this.$$.skip_bound = !1);
+    this.$$set && !mt(t) && (this.$$.skip_bound = !0, this.$$set(t), this.$$.skip_bound = !1);
   }
 }
 const Ot = "4";
@@ -500,9 +500,9 @@ function Rt(e) {
     m(n, s) {
       C(n, t, s);
     },
-    p: m,
-    i: m,
-    o: m,
+    p: y,
+    i: y,
+    o: y,
     d(n) {
       n && S(t);
     }
@@ -525,13 +525,13 @@ function Wt(e) {
   let t, n, s, o, a, i, u, c, r, I, g, p, M, j, D, tt, L, U, et, nt, h, st, w, Y, it;
   return {
     c() {
-      t = N("div"), n = N("div"), s = N("span"), s.textContent = "Votre TJM", o = y(), a = N("div"), i = N("button"), i.innerHTML = `<img src="${Zt}" alt="Minus Svg icon" class="img-btn svelte-vkg0rp"/>`, u = y(), c = N("span"), r = b(
+      t = N("div"), n = N("div"), s = N("span"), s.textContent = "Votre TJM", o = m(), a = N("div"), i = N("button"), i.innerHTML = `<img src="${Zt}" alt="Minus Svg icon" class="img-btn svelte-vkg0rp"/>`, u = m(), c = N("span"), r = b(
         /*tjm*/
         e[0]
-      ), I = y(), g = N("button"), g.innerHTML = `<img src="${Jt}" alt="Plus Svg icon" class="img-btn svelte-vkg0rp"/>`, p = y(), M = N("span"), j = y(), D = N("span"), D.textContent = "Votre salaire annuel brut", tt = y(), L = N("span"), U = b(
+      ), I = m(), g = N("button"), g.innerHTML = `<img src="${Jt}" alt="Plus Svg icon" class="img-btn svelte-vkg0rp"/>`, p = m(), M = N("span"), j = m(), D = N("span"), D.textContent = "Votre salaire annuel brut", tt = m(), L = N("span"), U = b(
         /*amount*/
         e[2]
-      ), et = b(" €"), nt = y(), h = N("a"), st = b("Envie de nous rejoindre ?"), d(s, "class", "title svelte-vkg0rp"), d(i, "class", "svelte-vkg0rp"), d(c, "class", "svelte-vkg0rp"), d(g, "class", "svelte-vkg0rp"), d(a, "class", "flex svelte-vkg0rp"), d(n, "class", "block svelte-vkg0rp"), d(M, "class", "line svelte-vkg0rp"), d(D, "class", "title svelte-vkg0rp"), d(L, "class", "amount svelte-vkg0rp"), d(h, "href", w = /*rateManager*/
+      ), et = b(" €"), nt = m(), h = N("a"), st = b("Envie de nous rejoindre ?"), d(s, "class", "title svelte-vkg0rp"), d(i, "class", "svelte-vkg0rp"), d(c, "class", "svelte-vkg0rp"), d(g, "class", "svelte-vkg0rp"), d(a, "class", "flex svelte-vkg0rp"), d(n, "class", "block svelte-vkg0rp"), d(M, "class", "line svelte-vkg0rp"), d(D, "class", "title svelte-vkg0rp"), d(L, "class", "amount svelte-vkg0rp"), d(h, "href", w = /*rateManager*/
       e[1].getJoinUsLink()), d(h, "class", "svelte-vkg0rp"), d(t, "class", "pay svelte-vkg0rp"), xt(t, "background", "url(" + Ht + ") no-repeat bottom, linear-gradient(180deg, rgb(241, 186, 216) 0%, #F42092 31%)");
     },
     m(z, T) {
@@ -565,23 +565,24 @@ function Wt(e) {
       2 && w !== (w = /*rateManager*/
       z[1].getJoinUsLink()) && d(h, "href", w);
     },
-    i: m,
-    o: m,
+    i: y,
+    o: y,
     d(z) {
       z && S(t), Y = !1, O(it);
     }
   };
 }
-function Ft(e, t, n) {
+let Ft = 2e3;
+function Xt(e, t, n) {
   let { rateManager: s } = t, { tjm: o = 600 } = t, a = s.getMinTJMValue(), { amount: i = 450 } = t;
-  const u = () => n(0, o = Math.max(a, o - 10)), c = () => n(0, o += 10);
+  const u = () => n(0, o = Math.max(a, o - 10)), c = () => n(0, o = Math.min(Ft, o + 10));
   return e.$$set = (r) => {
     "rateManager" in r && n(1, s = r.rateManager), "tjm" in r && n(0, o = r.tjm), "amount" in r && n(2, i = r.amount);
   }, [o, s, i, a, u, c];
 }
 class It extends q {
   constructor(t) {
-    super(), X(this, t, Ft, Wt, V, { rateManager: 1, tjm: 0, amount: 2 }, Vt);
+    super(), X(this, t, Xt, Wt, V, { rateManager: 1, tjm: 0, amount: 2 }, Vt);
   }
   get rateManager() {
     return this.$$.ctx[1];
@@ -603,11 +604,11 @@ class It extends q {
   }
 }
 K(It, { rateManager: {}, tjm: {}, amount: {} }, [], [], !0);
-function Xt(e) {
+function Kt(e) {
   W(e, "svelte-18e5n52", `.component.svelte-18e5n52{display:flex;justify-content:center;width:100%;color:#FFF;font-family:Montserrat,serif;font-size:16px;font-weight:500}.block.svelte-18e5n52{min-width:280px;width:50%;position:relative;z-index:1;margin:0 22px 0}.block.svelte-18e5n52:nth-child(1){margin-right:24px}@media screen and (max-width: 1280px),
         screen and (max-height: 720px){.block.svelte-18e5n52{width:100%;margin-bottom:1.5em}.component.svelte-18e5n52{flex-direction:column}}`);
 }
-function Kt(e) {
+function qt(e) {
   let t, n, s, o, a, i, u, c, r;
   s = new ft({});
   function I(M) {
@@ -627,7 +628,7 @@ function Kt(e) {
     e[1] !== void 0 && (p.amount = /*amount*/
     e[1]), i = new It({ props: p }), Q.push(() => lt(i, "tjm", I)), Q.push(() => lt(i, "amount", g)), {
       c() {
-        t = N("div"), n = N("div"), Mt(s.$$.fragment), o = y(), a = N("div"), Mt(i.$$.fragment), d(n, "class", "block svelte-18e5n52"), d(a, "class", "block svelte-18e5n52"), d(t, "class", "component svelte-18e5n52");
+        t = N("div"), n = N("div"), Mt(s.$$.fragment), o = m(), a = N("div"), Mt(i.$$.fragment), d(n, "class", "block svelte-18e5n52"), d(a, "class", "block svelte-18e5n52"), d(t, "class", "component svelte-18e5n52");
       },
       m(M, j) {
         C(M, t, j), l(t, n), J(s, n, null), l(t, o), l(t, a), J(i, a, null), r = !0;
@@ -652,7 +653,7 @@ function Kt(e) {
     }
   );
 }
-function qt(e, t, n) {
+function te(e, t, n) {
   let { company: s } = t, o = Pt.create(s), a, i;
   function u(r) {
     a = r, n(0, a);
@@ -669,7 +670,7 @@ function qt(e, t, n) {
 }
 class jt extends q {
   constructor(t) {
-    super(), X(this, t, qt, Kt, V, { company: 3 }, Xt);
+    super(), X(this, t, te, qt, V, { company: 3 }, Kt);
   }
   get company() {
     return this.$$.ctx[3];
@@ -679,10 +680,10 @@ class jt extends q {
   }
 }
 customElements.define("renumerator-component", K(jt, { company: {} }, [], [], !0));
-class te extends HTMLElement {
+class ee extends HTMLElement {
   connectedCallback() {
     const t = this.getAttribute("company"), n = t ?? "";
     new jt({ target: this, props: { company: n } });
   }
 }
-customElements.get("renumerator-component") ? console.log("déjà présent !") : customElements.define("renumerator-component", te);
+customElements.get("renumerator-component") ? console.log("déjà présent !") : customElements.define("renumerator-component", ee);
