@@ -12,4 +12,6 @@ export interface IRateManager {
   getSalary(selectedTjm: number): number;
 
   getJoinUsLink(): string
+
+  getAvantagesLink(): string
 }

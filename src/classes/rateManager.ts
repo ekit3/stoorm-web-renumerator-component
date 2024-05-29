@@ -32,4 +32,9 @@ export abstract class RateManager implements IRateManager {
   public getJoinUsLink(): string {
     return this.config.join_link;
   }
+
+  public getAvantagesLink(): string {
+    return this.config.avantages_link;
+  }
+
 }

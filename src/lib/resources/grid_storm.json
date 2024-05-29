@@ -3,5 +3,6 @@
   "min_salary": 0,
   "group_days": 15,
   "tjm_base": 450,
-  "join_link" : "https://stoorm.fr/#contact"
+  "join_link" : "https://stoorm.fr/#contact",
+  "avantages_link": "https://stoorm.fr/?page_id=627&preview=true#avantages"
 }
