@@ -27,7 +27,7 @@
   <span class="line"></span>
   <span class="title">Votre salaire annuel brut</span>
   <span class="amount">{amount} €</span>
-  <span class="advantage">et + de 9000€ d'<a href="https://stoorm.fr/#avantages">avantages sociaux</a></span>
+  <span class="advantage">et + de 9000€ d'<a href="#avantages">avantages sociaux</a></span>
   <a class="joinLink" href="{rateManager.getJoinUsLink()}">Envie de nous rejoindre ?</a>
 </div>
 
