@@ -84,6 +84,7 @@ body {
 
   .content-advantages {
     width: 100%;
+    margin: 0 50px;
   }
 
   .rounded-pill {
@@ -141,5 +142,5 @@ article{
 }
 
 html{
-  height: 100vh;
+  height: 100;
 }
