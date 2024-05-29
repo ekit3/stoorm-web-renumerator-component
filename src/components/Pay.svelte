@@ -27,7 +27,8 @@
   <span class="line"></span>
   <span class="title">Votre salaire annuel brut</span>
   <span class="amount">{amount} €</span>
-  <a href="{rateManager.getJoinUsLink()}">Envie de nous rejoindre ?</a>
+  <span class="advantage">et + de 9000€ d'<a href="https://stoorm.fr/#avantages">avantages sociaux</a></span>
+  <a class="joinLink" href="{rateManager.getJoinUsLink()}">Envie de nous rejoindre ?</a>
 </div>
 
 <style>
@@ -68,8 +69,14 @@
   }
 
   .pay a {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+
+  .pay .joinLink {
     display: inline-flex;
     padding: 16px 24px;
+    margin-top: 20px;
     background-color: white;
     border-radius: 11px;
     border: 0;
