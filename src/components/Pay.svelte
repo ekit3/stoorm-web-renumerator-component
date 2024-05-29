@@ -152,6 +152,10 @@
       width: 100%;
     }
 
+    .advantage{
+      font-size: 14px;
+    }
+
   }
 </style>
   
