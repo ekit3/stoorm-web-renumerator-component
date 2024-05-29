@@ -108,6 +108,7 @@ body {
 }
 
 #main-footer {
+  background: none;
   bottom: 0;
   position: absolute;
   text-align: center;
