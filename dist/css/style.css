@@ -57,6 +57,7 @@ body {
 .footer {
   justify-content: center;
   text-align: center;
+  margin-top: 50px;
 }
 
 .footer a {
@@ -98,6 +99,13 @@ body {
     width: 100%;
     text-align: left;
   }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    width: 100vw;
+  }
 }
 
 
@@ -109,7 +117,7 @@ body {
 
 #main-footer {
   background: none;
-  bottom: 0;
+  /*bottom: 0;*/
   position: absolute;
   text-align: center;
   width: 100%;
