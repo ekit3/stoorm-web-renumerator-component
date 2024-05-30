@@ -48,22 +48,6 @@ body {
   width: 40px;
 }
 
-.footer {
-  width: 100%;
-  text-align: center;
-  font-family: Montserrat, Helvetica, serif;
-}
-
-.footer {
-  justify-content: center;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.footer a {
-  color: black;
-}
-
 .remunerator-container {
   display: flex;
   flex-direction: column;
@@ -105,26 +89,12 @@ body {
     text-align: left;
   }
 
-  .footer {
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-  }
 }
-
 
 /** WORDPRESS OVERRIDE */
 #main-content {
   margin: 0 120px 0;
   background: #F5F2F8;
-}
-
-#main-footer {
-  background: none;
-  /*bottom: 0;*/
-  position: absolute;
-  text-align: center;
-  width: 100%;
 }
 
 article{
@@ -139,8 +109,4 @@ article{
 .content{
   height: 100vh;
   flex: 1;
-}
-
-html{
-  height: 100;
 }
