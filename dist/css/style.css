@@ -112,6 +112,7 @@ article{
 
 /** pre footer */
 .pre-footer {
+  font-family: 'Prompt', Helvetica, Arial, Lucida, sans-serif;
   width: 100%;
   background-color: #241b30 !important;
   padding: 20px 0;
@@ -149,6 +150,7 @@ article{
 
 .socials-title, .legal-title {
   margin-bottom: 10px;
+  font-size: 24px;
 }
 
 ul {
