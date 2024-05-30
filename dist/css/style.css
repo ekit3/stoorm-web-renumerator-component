@@ -51,7 +51,7 @@ body {
 .remunerator-container {
   display: flex;
   flex-direction: column;
-  margin: 5em 120px 50px 120px;
+  margin: 10em 120px 50px 120px;
 }
 
 .content{
@@ -111,6 +111,56 @@ article{
 }
 
 /** pre footer */
-.et_pb_section_13.et_pb_section {
+.pre-footer {
+  width: 100%;
   background-color: #241b30 !important;
+  padding: 20px 0;
+  color: #FFFFFF;
+}
+
+.logo img{
+  width: 120px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container > div {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.logo > img {
+  max-width: 100%;
+  width: 29%;
+}
+
+.socials, .legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials-title, .legal-title {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials-content a {
+  text-decoration: none;
+}
+
+.legal-content a{
+  color: #FFFFFF;
 }
