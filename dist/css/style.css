@@ -51,7 +51,7 @@ body {
 .remunerator-container {
   display: flex;
   flex-direction: column;
-  margin-top: 5em;
+  margin: 5em 120px 50px 120px;
 }
 
 .content{
@@ -93,7 +93,6 @@ body {
 
 /** WORDPRESS OVERRIDE */
 #main-content {
-  margin: 50px 120px 50px;
   background: #F5F2F8;
 }
 
@@ -109,4 +108,9 @@ article{
 .content{
   height: 100vh;
   flex: 1;
+}
+
+/** pre footer */
+.et_pb_section_13.et_pb_section {
+  background-color: #241b30 !important;
 }
