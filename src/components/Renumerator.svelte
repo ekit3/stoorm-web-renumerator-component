@@ -18,8 +18,6 @@
 
   .renumerator {
     display: flex;
-    padding: 77px 40px;
-    width: calc(100% - 80px);
     border-radius: 32px;
     background: linear-gradient(0deg, #241B30, #241B30), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
     flex: 1;
