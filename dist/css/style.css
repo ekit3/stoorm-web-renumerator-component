@@ -13,7 +13,7 @@ body {
   height: fit-content;
   border-radius: 32px;
   background: #FFFFFF;
-  margin: 38px 22px 0
+  margin: 38px 0 38px;
 }
 
 .advantages-title {
@@ -62,7 +62,6 @@ body {
 @media screen and (max-width: 860px), screen and (max-height: 700px) {
 
   .content-advantages {
-    margin: 0 25px;
     box-sizing: border-box;
   }
 
