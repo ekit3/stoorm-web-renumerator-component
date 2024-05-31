@@ -61,11 +61,6 @@ body {
 
 @media screen and (max-width: 860px), screen and (max-height: 700px) {
 
-  /** WORDPRESS OVERRIDE */
-  #main-content {
-    margin: 0 50px 0 !important;
-  }
-
   .content-advantages {
     margin: 0 25px;
     box-sizing: border-box;
@@ -95,19 +90,21 @@ body {
   .content-advantages {
     margin: 0;
   }
-  #main-content {
-    margin: 0;
-    width: 100%;
-  }
+
 
   .et_pb_section_1.et_pb_section, .et_pb_section_3.et_pb_section {
     width: 100%;
+  }
+
+  .remunerator-container {
+    margin: 10em 10px 10px 10px;
   }
 }
 
 /** WORDPRESS OVERRIDE */
 #main-content {
   background: #F5F2F8;
+  margin: 0 !important;
 }
 
 article{
