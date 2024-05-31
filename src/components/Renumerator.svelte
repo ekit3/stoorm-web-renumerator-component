@@ -2,7 +2,7 @@
 </script>
 <div class="renumerator">
   <div class="container">
-    <div class="block">
+    <div class="rem-block">
       <span class="title">Découvrez votre futur salaire ! </span>
       <div class="flex">
         <p>Parce que le respect entre collaborateurs passe avant tout par une rémunération équitable et juste, nous avons mis en place un système qui permet à nos employés de s’épanouir dans et en dehors de leur vie professionnelle.</p>
@@ -23,9 +23,10 @@
     border-radius: 32px;
     background: linear-gradient(0deg, #241B30, #241B30), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
     flex: 1;
+    flex-direction: column;
   }
 
-  .renumerator .block {
+  .renumerator .rem-block {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -34,7 +35,7 @@
     flex: 1;
   }
 
-  .renumerator .block span.title {
+  .renumerator .rem-block span.title {
     font-size: 2.5em;
     font-weight: 900;
     margin-bottom: 40px;
@@ -66,14 +67,14 @@
       margin-top: 5px;
     }
 
-    .renumerator .block span.title {
+    .renumerator .rem-block span.title {
       font-size: 2em;
     }
   }
 
   @media screen and (max-width: 500px) {
 
-    .renumerator .block {
+    .renumerator .rem-block {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -83,6 +84,7 @@
 
     .renumerator .container {
       display: flex;
+      flex-direction: column;
       align-self: center;
       width: 100%;
       margin-top: 0;
@@ -97,7 +99,7 @@
       margin: 0 0 20px;
     }
 
-    .renumerator .block span.title {
+    .renumerator .rem-block span.title {
       font-size: 1.25em;
     }
 

@@ -31,7 +31,6 @@
     font-family: Montserrat,serif;
     font-size: 16px;
     font-weight: 500;
-    align-items: stretch;
   }
 
   .block {
@@ -39,11 +38,6 @@
     width: 50%;
     position: relative;
     z-index: 1;
-    margin: 0 22px 0;
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Make blocks flexible to grow within the parent container */
-    justify-content: stretch; /* Ensure inner content stretches */
   }
 
   .block:nth-child(1){
@@ -52,7 +46,7 @@
 
   @media screen and (max-width: 1280px),
         screen and (max-height: 720px){
-    /* Styles pour les écrans de largeur 1280px et plus */
+    /* Styles pour les écrans de largeur 1280px et moins */
     .block {
       width: 100%;
       margin-bottom: 1.5em;
