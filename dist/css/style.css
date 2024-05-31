@@ -51,7 +51,7 @@ body {
 .remunerator-container {
   display: flex;
   flex-direction: column;
-  margin: 10em 120px 50px 120px;
+  margin: 10em 10px 10px 10px;
 }
 
 .content{
@@ -96,9 +96,7 @@ body {
     width: 100%;
   }
 
-  .remunerator-container {
-    margin: 10em 10px 10px 10px;
-  }
+
 }
 
 /** WORDPRESS OVERRIDE */
