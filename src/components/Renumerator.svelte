@@ -78,6 +78,7 @@
       width: 100%;
       box-sizing: border-box;
       justify-content: center;
+      margin: 20px 0 0;
     }
 
     .renumerator .container {
@@ -90,7 +91,7 @@
 
     .renumerator .flex{
       margin: 5px 20px 0;
-      font-size: 1em;
+      font-size: 0.75em;
     }
 
     .renumerator .flex p {
@@ -98,7 +99,7 @@
     }
 
     .renumerator .rem-block span.title {
-      font-size: 1.25em;
+      font-size: 1em;
     }
 
   }
