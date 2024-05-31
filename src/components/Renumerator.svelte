@@ -22,13 +22,15 @@
     background: linear-gradient(0deg, #241B30, #241B30), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
     flex: 1;
     flex-direction: column;
+    height: 100%;
+
   }
 
   .renumerator .rem-block {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    margin-top: 20%;
     box-sizing: border-box;
     flex: 1;
   }
@@ -71,15 +73,6 @@
   }
 
   @media screen and (max-width: 500px) {
-
-    .renumerator .rem-block {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      box-sizing: border-box;
-      justify-content: center;
-      margin: 20px 0 0;
-    }
 
     .renumerator .container {
       display: flex;
