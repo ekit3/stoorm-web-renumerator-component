@@ -3,6 +3,8 @@
   import minusSvg from '../images/minus-icon.svg?url';
   import plusSvg from '../images/plus-icon.svg?url';
   import stoorm_logo from '../images/remunerator_background.svg'
+  import CurrencyFormat from "./CurrencyFormat.svelte";
+  import NumberFormat from "./NumberFormat.svelte";
 
   export let rateManager: IRateManager;
   export let tjm = 600;
@@ -11,14 +13,15 @@
   export let amount = 450;
 </script>
 
-<div class="pay" style="background: url({stoorm_logo}) no-repeat bottom, linear-gradient(180deg, rgb(241, 186, 216) 0%, #F42092 31%)">
+<div class="pay"
+     style="background: url({stoorm_logo}) no-repeat bottom, linear-gradient(180deg, rgb(241, 186, 216) 0%, #F42092 31%)">
   <div class="block">
     <span class="title">Votre TJM</span>
     <div class="flex">
       <button on:click={() => tjm = Math.max(minTjm, tjm - 10)}>
         <img src={minusSvg} alt="Minus Svg icon" class="img-btn">
       </button>
-      <span>{tjm}</span>
+      <span><NumberFormat value="{tjm}"></NumberFormat></span>
       <button on:click={() =>  tjm = Math.min(maxTjm, tjm + 10)}>
         <img src={plusSvg} alt="Plus Svg icon" class="img-btn">
       </button>
@@ -26,8 +29,10 @@
   </div>
   <span class="line"></span>
   <span class="title">Votre salaire annuel brut</span>
-  <span class="amount">{amount} €</span>
-  <span class="advantage">et + de 9000€ d'<a href="{rateManager.getAvantagesLink()}">avantages sociaux</a></span>
+  <span class="amount">
+    <CurrencyFormat value="{amount}"></CurrencyFormat>
+  </span>
+  <span class="advantage">et + de <CurrencyFormat value="{9000}"></CurrencyFormat> d’<a href="{rateManager.getAvantagesLink()}">avantages sociaux</a></span>
   <a class="joinLink" href="{rateManager.getJoinUsLink()}">Envie de nous rejoindre ?</a>
 </div>
 
@@ -81,7 +86,7 @@
     border-radius: 11px;
     border: 0;
     color: #000;
-    font-family: Montserrat,serif;
+    font-family: Montserrat, serif;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -130,7 +135,7 @@
   }
 
   @media screen and (max-width: 380px) {
-    .pay span.title{
+    .pay span.title {
       font-size: 0.75em;
     }
   }
@@ -152,7 +157,7 @@
       width: 100%;
     }
 
-    .advantage{
+    .advantage {
       font-size: 14px;
     }
 

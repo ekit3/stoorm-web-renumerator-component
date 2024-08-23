@@ -5,7 +5,7 @@
     <div class="rem-block">
       <span class="title">Découvrez votre futur salaire ! </span>
       <div class="flex">
-        <p>Parce que le respect entre collaborateurs passe avant tout par une rémunération équitable et juste, nous avons mis en place un système qui permet à nos employés de s’épanouir dans et en dehors de leur vie professionnelle.</p>
+        <p>Parce que le respect entre collaborateurs et collaboratrices passe avant tout par une rémunération équitable et juste, nous avons mis en place un système qui permet à nos employés et employées de s’épanouir dans et en dehors de leur vie professionnelle.</p>
         <p>Pour vous donner un aperçu de ce à quoi pourrait ressembler votre futur salaire, nous vous laissons vous amuser avec notre simulateur.</p>
       </div>
     </div>
